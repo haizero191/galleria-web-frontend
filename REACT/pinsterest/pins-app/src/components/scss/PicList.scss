@@ -1,0 +1,22 @@
+.PicList {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: white;
+    height: 100vh;
+    margin-top: 90px!important;
+    justify-content: center;
+
+}
+
+.column {
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    max-width: 25%;
+    padding: 0 12px;
+}
+
+
+
+

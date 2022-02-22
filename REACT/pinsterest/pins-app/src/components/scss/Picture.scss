@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;600&display=swap');
+@import "./config/index";
+
+.Picture {  
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 30px;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+    min-height: 160px;
+    
+    & .main-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 18px;
+        cursor: zoom-in;
+        & .image {
+            position: relative;
+            & .lazy-load-image-background {
+                height: 100%!important;
+                height: auto;
+                display: block!important;
+                & span {
+                    height: 100%;
+                    display: block!important;
+                    height: auto;
+                    width: 100%;
+                    background-size: cover;
+                    object-fit: cover;
+                    display: block;
+                }
+            } 
+            & img {
+                display: block;
+                height: auto;
+                width: 100%;
+                background-size: cover;
+                object-fit: cover;
+                display: block;
+                top: 0;
+                vertical-align: middle;
+                min-height: 180px;
+            }
+        }
+
+        & .hover-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            top: 0;
+            padding: 14px;
+            background-color: rgba($color: #111111, $alpha: 0.5);  
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            opacity: 0;
+            transition: all 0.1s;
+            & a {
+                height: 100%;
+            }
+            &:hover {
+                opacity: 1;
+                transition: all 0.1s;
+            }
+            & .top-pic {
+                display: flex;
+                justify-content: space-between;
+                & .left-t-pic {
+                    display: flex;
+                    align-items: center;
+                    & span {
+                        color: white;
+                        font-weight: bold;
+                        margin-right: 10px;
+                    }
+                }
+                & .save-btn {
+                   @include save-btn;
+                }
+            }
+            & .bottom-pic {
+                display: flex;
+                & .btn-link-to {
+                    background-color: white;  
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: black;
+                    font-weight: bold;
+                    padding: 8px 15px;
+                    border-radius: 20px;
+                    max-width: 55%;
+                    font-size: 14px;
+                    opacity: 0.8;
+                   
+                    & span {
+                        text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
+                        -webkit-line-clamp: 1;// số dòng muốn hiển thị
+                        -webkit-box-orient:vertical;
+                        white-space: pre-wrap; 
+                        overflow: hidden;
+                    } 
+                    & img {
+                        margin-right: 8px;
+                    }
+                }
+                & .btn-action {
+                    max-width: 45%;
+                    width: 45%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    & .btn-bt-pic {
+                        height: 100%;
+                        background-color: white;
+                        margin-left: 6px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    & .about-pic {
+        height: auto;
+        background-color: white;
+        padding-right: 8px;
+        padding-top: 8px;
+        & .name-pic {
+          
+            margin: 0;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: capitalize;
+            font-weight: bold;
+            & span {
+                text-overflow: ellipsis; //thêm 3 dấu chấm ở cuối
+                -webkit-line-clamp: 2;// số dòng muốn hiển thị
+                -webkit-box-orient:vertical;
+                white-space: pre-wrap; 
+                overflow: hidden;
+            }
+        }
+        
+    }
+   
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.lazy-load-image-background.blur {
+    filter: blur(200px)!important;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+    filter: blur(0)!important;
+    transition: filter .1s;
+}
