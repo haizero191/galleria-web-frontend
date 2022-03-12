@@ -52,4 +52,15 @@
         }
         
     }
+
+    & {
+        ::ng-deep {
+            & .button-design {
+               &:hover {
+                   background-color: #D4651F;
+                   border: none!important;
+               }
+            }
+        }
+    }
 }

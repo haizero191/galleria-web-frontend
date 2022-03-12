@@ -39,6 +39,10 @@
         position: absolute;
         top: 0;
         font-family: $Oswald-font;
+        @include media(phone, tablet) {
+           height: auto;
+        
+        }
         & .hover-card {
             flex-grow: 1;
             height: 100%;    
@@ -58,6 +62,9 @@
                 justify-content: center;
                 color: white;
                 transition: transform 0.6s;
+                @include media(phone, tablet) {
+                    display: none;
+                }
                 & h2 {
                     font-size: 39px;
                     text-transform: uppercase;
