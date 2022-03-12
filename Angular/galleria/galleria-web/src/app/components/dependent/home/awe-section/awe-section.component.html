@@ -1,0 +1,28 @@
+
+
+<div class="awe-section">
+    <app-navbar></app-navbar>
+    <div class="background-main" >
+        <img src="{{currentImage.url}}"/>
+    </div>
+    <div class="hover-area">
+        <div class="hover-card" [attr.data-current]="0" (mouseenter)="mouseEnter(hover1)" #hover1>
+            <div class="text">
+                <h2>{{arrImages[0].title}}</h2>
+                <p>{{arrImages[0].smText}}</p>
+            </div>
+        </div>
+        <div class="hover-card" [attr.data-current]="1" (mouseenter)="mouseEnter(hover2)" #hover2>
+            <div class="text middle-text">
+                <h2>{{arrImages[1].title}}</h2>
+                <p>{{arrImages[1].smText}}</p>
+            </div>
+        </div>
+        <div class="hover-card" [attr.data-current]="2" (mouseenter)="mouseEnter(hover3)" #hover3>
+            <div class="text">
+                <h2>{{arrImages[2].title}}</h2>
+                <p>{{arrImages[2].smText}}</p>
+            </div>
+        </div>
+    </div>
+</div>

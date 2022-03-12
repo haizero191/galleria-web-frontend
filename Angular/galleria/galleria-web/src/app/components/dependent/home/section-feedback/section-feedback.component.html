@@ -1,0 +1,20 @@
+<div class="section-feedback">
+    <div class="container">
+        <div class="title">
+            <h3>KHÁCH HÀNG NÓI GÌ</h3>
+            <p>Chúng tôi tự hào về chất lượng và dịch vụ của mình</p>
+        </div>
+        <div class="main">
+            <div class="row">
+                <div class="feedback-item" *ngFor="let item of feedbackList">
+                    <app-section-feedback-item
+                        [feedback]="item.feedback"
+                        [urlImage]="item.user.url_image"
+                        [name]="item.user.name"
+                    >
+                    </app-section-feedback-item>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>

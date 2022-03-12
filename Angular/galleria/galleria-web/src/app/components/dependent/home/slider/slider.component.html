@@ -1,0 +1,42 @@
+<div class="slider">
+    <div class="title">
+        <h3>{{title}}</h3>
+        <p>{{smTitle}}</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="inner-cate-list" [ngStyle]="setInnerStyle()" (window:resize) = "onResize($event)">
+                <div class="slider-contain" #slideContent>
+                    <div class="card-item" *ngFor="let item of listSection" [ngClass]="{square: itemType == 'square'}">
+                        <div class="image">
+                            <a><img src="{{item.url}}"/></a>
+                        </div>
+                        <div class="hover-action" *ngIf="itemType == 'square'">
+                            <div class="watch-detail">
+                                <img src="https://img.icons8.com/ios/40/FFFFFF/visible--v1.png"/>
+                            </div>
+                            <div class="add-to-cart">
+                                <img src="https://img.icons8.com/external-anggara-line-anggara-putra/40/FFFFFF/external-cart-ecommerce-anggara-line-anggara-putra-3.png"/>
+                            </div>
+                        </div>
+                        <div class="note-discount" *ngIf="item.discount != 0 && item.discount">
+                            <app-discount-badge discount="-{{item.discount}}%"></app-discount-badge>
+                        </div>
+                        <div class="cate-name">
+                            <h3>{{item.text}}</h3>
+                            <div class="price" *ngIf="itemType == 'square'">
+                                <p>{{ item.price - item.price * item.discount/100  | currency: ' đ '}}</p>
+                                <p *ngIf="item.discount != 0">{{ item.price |currency: ' đ '}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-slider">
+                    <div class="prev" (click)="onPrev(slideContent)"></div>
+                    <div class="next" (click)="onNext(slideContent)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

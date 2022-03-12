@@ -1,0 +1,175 @@
+@import "../../../scss/index.scss";
+.footer {
+    background-color: #454545;
+    padding-top: 52px;
+    & .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        & .main {
+            & .top-footer {
+                display: flex;
+                justify-content: space-between;
+                color: white;
+                & .col {
+                    & .col-header {
+                        & h3 {
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 27px;
+                            margin-bottom: 20px;
+                            text-transform: uppercase;
+
+                        }
+                    }
+
+                    & .col-body {
+                        & ul {
+                            margin-bottom: 30px;
+                            & li {
+                                margin-bottom: 10px;
+                                & a {
+                                    cursor: pointer;
+                                    font-weight: 300;
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                    
+                                }
+                                & .branch {
+                                    display: flex;
+                                    align-items: center;
+                                    & img {
+                                        width: 15px;
+                                        height: 15px;
+                                        margin-right: 8px;
+                                    }
+                                    & p {
+                                        font-weight: 300;
+                                        font-size: 14px;
+                                        line-height: 24px;
+                                        
+                                    }
+                                }
+
+                                & .location-phone {
+                                    & p {
+                                        font-weight: 300;
+                                        font-size: 14px;
+                                        line-height: 24px;
+                                        margin: 4px 0px;
+                                        & span {
+                                            transition: 0.2s;
+                                            &:hover {
+                                                padding-left: 8px;
+                                                transition: 0.2s;
+                                                text-decoration: underline;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            & .connect-us {
+                & ul {
+                    display: flex;
+                  
+                    & li {
+                        margin-bottom: 10px;
+                        & a {
+                            width: 40px;
+                            height: 40px;
+                            margin-right: 10px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            font-weight: 300;
+                            font-size: 14px;
+                            line-height: 24px;
+                            border: 1.4px solid #ddd;
+                            &:hover {
+                                filter: brightness(80%);
+                            }
+                            & img {
+                                width: 24px;
+                                height: 24px;
+                                
+                            }
+                        }
+                        & .branch {
+                            display: flex;
+                            align-items: center;
+                            & img {
+                                width: 15px;
+                                height: 15px;
+                            }
+                            & p {
+                                font-weight: 300;
+                                font-size: 14px;
+                                line-height: 24px;
+                            }
+                        }
+
+                       
+                    }
+                }
+                & .payment {
+                    & h3 {
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 27px;
+                        margin-bottom: 20px;
+                        text-transform: uppercase;
+                    }
+                    & ul {
+                        display: flex;
+                        height: 30px;
+                        & li {
+                            margin: 2px;
+                            width: 100%;
+                            height: 100%;
+                            & img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .policy{
+                & ul {
+                    & li {
+                        transition: 0.2s;
+                        &:hover {
+                            padding-left: 8px;
+                            transition: 0.2s;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .bottom-footer {
+        height: 44px;
+        background-color: #2C2C2C;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & p {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 300;
+            & span {
+                font-weight: bold;
+            }
+        }
+    }
+}

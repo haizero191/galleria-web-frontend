@@ -1,0 +1,14 @@
+@import "../../../../scss/index.scss";
+.section-category {
+    width: 100%;
+    min-height: 411px;
+   
+    background-color: #F5F2EB;
+    font-family: $Oswald-font;
+    & .container {
+        width: 100%;
+        height: 100%;
+        
+    }
+}
+

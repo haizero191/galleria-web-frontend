@@ -1,0 +1,44 @@
+@import "../../../../scss/index.scss";
+
+.section-news {
+    margin: 40px 0px;
+    height: 680px;
+    font-family: $Oswald-font;
+    & .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        & .main {
+            & .title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 30px;
+                & h3 {
+                    font-size: 38px;
+                    line-height: 40px;
+                    font-weight: 400;
+                    color: $main-title-color-brown;
+                    text-transform: uppercase;
+                    margin-bottom: 18px;
+                }
+            
+                & p {
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: $small-title-color-gray;
+                    font-weight: 300;
+                }
+            }
+        }
+        & .content {
+            & .row {
+                display: flex;
+                margin-left: -10px;
+                margin-right: -10px;
+                padding: 0px 60px;
+            }
+        }
+    }
+}
+

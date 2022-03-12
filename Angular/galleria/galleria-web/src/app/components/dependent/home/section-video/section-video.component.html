@@ -1,0 +1,26 @@
+<div class="section-video">
+    <div class="container">
+        <div class="main">
+            <div class="left-content">
+                <div class="title">
+                    <h3>Tầm Nhìn Từ Chất Lượng Sản Phẩm</h3>
+                    <p>Các sản phẩm của Đồ Da Galleria đều được làm từ chất liệu da thật 100%, đường chỉ may tinh tế, chắc chắn và giá cả hợp lý.</p>
+                    <app-button-design color="white" borderStr="1px solid white"></app-button-design>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="video-background" >
+                    <div class="image">
+                        <img src="https://bizweb.dktcdn.net/100/430/435/themes/831833/assets/bg-play.jpg?1645199285789"/>
+                    </div>
+                    <div class="icon-start" (click)="onOpenVideo()">
+                        <div class="video-container" [ngClass]="{'active-video': isOpenVideo}">
+                            <app-video-tab  (childClicked)="handleClikedFromChild($event)" *ngIf="isOpenVideo"></app-video-tab>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,13 @@
+<div class="video-tab" #someVar>
+    <div class="screen" #screen>
+        <youtube-player 
+            videoId="2WONg7MzcTA" 
+            suggestedQuality="highres" 
+            [height]="550" 
+            [width]="1000" 
+        >
+        </youtube-player>
+    </div>
+    
+    <div class="bg-dialog" (click)="closeVideo()" ></div>
+</div>

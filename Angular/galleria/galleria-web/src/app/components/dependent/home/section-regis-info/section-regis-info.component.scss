@@ -1,0 +1,94 @@
+@import "../../../../scss/index.scss";
+.section-regis-info {
+    height: 364px;
+    background-color: red;
+    font-family: $Oswald-font;
+    & .container {
+        height: 100%;
+        & .main {
+            height: 100%;
+            width: 100%;
+            background-color: blue;
+            display: flex;
+            & .left-content {
+                width: 50%;
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(60%);
+                background-image: url("https://bizweb.dktcdn.net/100/430/435/themes/831833/assets/bg-newsletter.jpg?1645199285789");
+            }
+
+            & .right-content {
+                background-color: #F5F2EB;
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0px 60px;
+               
+                & .title {
+                    & h4 {
+                        font-size: 38px;
+                        line-height: 50px;
+                        color: #63584c;
+                        line-height: 50px;
+                        font-weight: 400!important;
+                    }
+                    & p {
+                        font-size: 18px;
+                        font-weight: 300;
+                        line-height: 24px;
+                        color: #999;
+                        margin: 20px 0px;
+                        margin-top: 10px;
+                    }
+                }
+
+                & .regis-email {
+                    height: 52px;
+                    display: flex;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 15px #cdcdcd;
+                    transform: translateX(-18px);
+                    & input {
+                        height: 100%;
+                        width: 84%;
+                        border: none;
+                        padding: 20px;
+                        border-radius: 30px 0px 0px 30px;
+                        &::-webkit-input-placeholder {
+                            font-size: 16px;
+                            color: #1c1c1c;
+                            opacity: 0.6;
+                            line-height: 27px;
+                            font-weight: 300;
+                            display: flex;
+                            align-items: center;
+
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    & a {
+                        width: 16%;
+                        background-color: #D4651F;
+                        display: inline-block;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 0px 30px 30px 0px;
+                        text-transform: uppercase;
+                        filter: brightness(90%);
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@import "../../../../scss/index.scss";
+
+.section-feedback {
+    font-family: $Oswald-font;
+    padding: 60px 0px;
+    padding-bottom: 40px;
+    & .container {
+        min-width: 1240px;
+        width: 1140px;
+        margin: 0 auto;
+        & .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            & h3 {
+                font-size: 38px;
+                line-height: 40px;
+                font-weight: 400;
+                color: $main-title-color-brown;
+                text-transform: uppercase;
+                margin-bottom: 18px;
+            }
+        
+            & p {
+                font-size: 18px;
+                line-height: 22px;
+                color: $small-title-color-gray;
+                font-weight: 300;
+            }
+        }
+
+        & .main {
+            & .row {
+                height: auto;
+                display: flex;
+                margin-left: -8px;
+                margin-right: -8px;
+            }
+        }
+    }
+}

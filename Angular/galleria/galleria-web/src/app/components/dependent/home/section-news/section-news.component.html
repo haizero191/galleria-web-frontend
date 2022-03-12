@@ -1,0 +1,23 @@
+<div class="section-news">
+    <div class="container">
+        <div class="main">
+            <div class="title">
+                <h3>Tin tức</h3>
+                <p>Những bài viết mới nhất</p>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <div class="news-card-item" *ngFor="let item of listFeedBack">
+                        <app-section-news-item
+                            [title]="item.title"
+                            [detail]="item.detail"
+                            [time]="item.time"
+                            [srcImg]="item.srcImg"
+                        ></app-section-news-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

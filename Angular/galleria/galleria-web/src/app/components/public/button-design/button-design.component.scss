@@ -1,0 +1,26 @@
+.button-design {
+    height: 40px;
+    width: 140px;
+    padding: 0 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    z-index: 900;
+    cursor: pointer;
+    & a {
+        font-size: 14px;
+        text-transform: uppercase;
+        
+    }
+
+    &:hover a{
+        color: white;
+        
+    }
+
+    &:hover {
+        filter: brightness(110%);
+    }
+}
